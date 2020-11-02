@@ -1,0 +1,54 @@
+#On importe la librairie pandas sous le nom pd
+
+import pandas as pd
+
+#On importe le fichier contenant les données sous format csv avec la fonction read_csv() de pandas
+
+df=pd.read_csv("nomdufichier.csv")
+
+# La méthode head() permet de visualiser les 5 premières lignes (par défault, si l'on désire changer ce chiffre il suffit de le spécifier entre parenthèses) de notre tableau de données 
+
+df.head() 
+
+#La méthode tail() permet de visualiser les 5 dernières lignes (par défault, si l'on désire changer ce chiffre il suffit de le spécifier entre parenthèses) de notre tableau de données 
+
+df.tail()
+
+#La fonction permet de connaître le nombre de lignes du DataFrame
+
+len(df) 
+
+#La méthode shape() permet de connaître le structure du DataFrame
+
+df.shape()
+
+#L'attribut dtypes permet de connaître le type de variables de notre DataFrame
+df.dtypes 
+
+#Les méthodes isnull() et isna() permettent de savoir s'il y a respectivement des éléments manquants ou nuls au sein d'un DataFrame
+
+df.isnull()
+df.isna()
+
+#La méthode sum() permet de connaître le nombre de valeurs nulles dans notre DataFrame
+
+df.isnull().sum() 
+
+#La méthode info permet de connaître à la fois le nom des variables, le nombre de lignes, le nombre de données manquantes, le type des variables
+
+df.info() 
+
+#La méthode describe() donne les statistiques éléméntaires des variables 
+
+df.describe() 
+
+#La méthode duplicated() permet de savoir s'il y a des doublons dans la dataframe, on peut spécifier une colonne entre guillemets ou une partie des colonnes entre crochets
+df.duplicated() 
+
+#La méthode sum() appliquée à la méthode duplicated permet de connaître le nombre de doublons
+
+df.duplicated().sum() 
+
+#La méthode drop_duplicates() permet de supprimer les doublons au sein de la dataframe, on peut spécifier une colonne entre guillemets ou une partie des colonnes entre crochets
+
+df.drop_duplicates() 
