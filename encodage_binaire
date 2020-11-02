@@ -1,0 +1,7 @@
+#La fonction get_dummies permet de créer des dummies à partir d'une variable catégorielle: On aura alors un DataFrame avec toutes les catégories encodées de façon binaire
+
+pd.get_dummies(df['nomdelacolonne'])
+
+#L'argument drop_first=True permet de supprimer une des variables encodée pour palier au problème de multicolinéarité
+ 
+pd.get_dummies(df['nomdelacolonne'], drop_first=True)
