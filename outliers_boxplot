@@ -1,0 +1,7 @@
+#on importe la librairie seaborn sous le nom sns
+
+import seaborn as sns 
+
+#On affiche le boxplot associé à la variable
+
+sns.boxplot(df['nomdelacolonne'])
