@@ -1,0 +1,26 @@
+#On supprime les valeurs aberrantes
+
+#On calcule Q1
+
+q1=df["nomdelacolonne"].quantile(q=0.25)
+
+#On calcule Q3
+
+q3=df["nomdelacolonne"].quantile(q=0.75)
+
+#On calcule l'écart interquartile (IQR)
+
+IQR=q3-q1
+
+#On calcule la borne inférieure à l'aide du Q1 et de l'écart interquartile
+
+borne_inf = q1-1.5*IQR
+
+#On calcule la borne supérieure à l'aide du Q3 et de l'écart interquartile
+
+borne_sup = q3 +1.5*IQR
+
+#On garde les valeurs à l'intérieur de la borne inférieure et supérieure
+
+df= df[df["nomdelacolonne"]<borne_sup]
+df=df[df["nomdelacolonne"]>borne_inf]
