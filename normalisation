@@ -1,0 +1,9 @@
+#Normalisation
+
+#On importe la fonction MinMaxScaler() de la librairie scikit learn
+
+from sklearn.preprocessing import MinMaxScaler
+
+normalisation=MinMaxScaler()
+
+df_nomdelacolonne_normalisee=normalisation.fit_transform(df['nomdelacolonne'])
