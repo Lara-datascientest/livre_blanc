@@ -1,0 +1,7 @@
+#On importe la fonction StandardScaler() de la librairie scikit learn
+
+from sklearn.preprocessing import StandardScaler
+
+standardisation=StandardScaler()
+
+df_nomdelacolonne_standardisee=standardisation.fit_transform(df['nomdelacolonne'])
