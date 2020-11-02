@@ -6,11 +6,11 @@ import pandas as pd
 
 df=pd.read_csv("nomdufichier.csv")
 
-# La méthode head() permet de visualiser les 5 premières lignes (par défault, si l'on désire changer ce chiffre il suffit de le spécifier entre parenthèses) de notre tableau de données 
+# La méthode head() permet de visualiser les 5 premières lignes (par défault, si l'on désire changer ce chiffre il suffit de le spécifier entre parenthèses) de notre DataFrame
 
 df.head() 
 
-#La méthode tail() permet de visualiser les 5 dernières lignes (par défault, si l'on désire changer ce chiffre il suffit de le spécifier entre parenthèses) de notre tableau de données 
+#La méthode tail() permet de visualiser les 5 dernières lignes (par défault, si l'on désire changer ce chiffre il suffit de le spécifier entre parenthèses) de notre DataFrame
 
 df.tail()
 
